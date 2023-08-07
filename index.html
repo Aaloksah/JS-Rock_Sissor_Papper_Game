@@ -49,15 +49,15 @@
                 result = move3;
             }
 
-            if (result == 'You Win') {
+             if (result == 'You Win') {
                 new Audio('Audio/win.mp3').play();
                 document.getElementById("result").innerHTML = `<span style="font-weight: bold; color: rgb(2, 252, 2);">Computer Chose ${computerMove} <br>${result}!</span>🎉`;
             }
-            else if (result == "You Loose") {
+            if (result == "You Loose") {
                 new Audio('Audio/fail.mp3').play();
                 document.getElementById("result").innerHTML = `<span style="font-weight: bold; color:red;">Computer Chose ${computerMove} <br>${result}!</span> ❌`;
             }
-            else {
+            if(result == "Tie") {
                 new Audio("Audio/loose.mp3").play();
                 document.getElementById("result").innerHTML = `<span style="font-weight: bold; color:rgb(156, 156, 156);">Computer Chose ${computerMove} <br>${result}!</span>`;
             }
